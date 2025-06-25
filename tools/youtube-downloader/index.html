@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Video Downloader - LinkToQR.me Toolkit</title>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared-styles.css">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%); min-height: 100vh; }
+    .tool-container { background: white; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    .input-group { background: #f1f5f9; border-radius: 12px; }
+    .video-preview { background: #f8fafc; border-radius: 15px; border: 2px dashed #e5e7eb; }
+    .video-ready { border-color: #dc2626; background: #fef2f2; }
+    .drop-zone { border: 2px dashed #d1d5db; border-radius: 12px; transition: all 0.3s; }
+    .drop-zone.dragover { border-color: #dc2626; background-color: #fef2f2; }
+    .progress-bar { background: #e5e7eb; border-radius: 10px; overflow: hidden; }
+    .progress-fill { height: 8px; background: linear-gradient(90deg, #dc2626, #ea580c); transition: width 0.3s; }    .quality-badge { display: inline-block; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 500; border-radius: 9999px; }
+    .quality-hd { background-color: #dcfce7; color: #166534; }
+    .quality-sd { background-color: #dbeafe; color: #1e40af; }
+    .quality-audio { background-color: #f3e8ff; color: #7c3aed; }
+  </style>
+</head>
+<body class="p-4">
+  <!-- Navigation Header -->
+  <nav class="mb-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-white bg-opacity-90 backdrop-blur-sm rounded-xl p-4 shadow-lg">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-4">
+            <a href="../../index.html" class="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors">
+              <i class="fas fa-arrow-left mr-2"></i>LinkToQR.me
+            </a>
+            <span class="text-gray-400">|</span>
+            <h2 class="text-xl font-semibold text-gray-800">YouTube Downloader</h2>
+          </div>
+          <div class="flex items-center space-x-3">
+            <a href="../../index.html" class="px-4 py-2 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition-colors text-sm">
+              <i class="fas fa-home mr-2"></i>Home
+            </a>
+            <a href="../universal-video-downloader/index.html" class="px-4 py-2 bg-purple-100 text-purple-700 rounded-lg hover:bg-purple-200 transition-colors text-sm">
+              <i class="fas fa-video mr-2"></i>Universal Downloader
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-8">
+      <h1 class="text-4xl font-bold text-white mb-2">YouTube Video Downloader</h1>
+      <p class="text-white opacity-90">Download YouTube videos and audio in various formats</p>
+      <div class="mt-4 p-3 bg-yellow-100 border border-yellow-400 rounded-lg text-yellow-800 text-sm">
+        <i class="fas fa-exclamation-triangle mr-2"></i>
+        Please respect copyright laws and YouTube's Terms of Service. Only download content you have rights to.
+      </div>
+    </div>    <div class="tool-container p-8">
+      <div class="tool-layout">
+        
+        <!-- Input Section -->
+        <div class="input-section space-y-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Video Information</h2>
+          
+          <!-- URL Input -->
+          <div class="input-group p-6">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">YouTube URL</h3>
+            <div class="space-y-4">
+              <div class="relative">
+                <input 
+                  type="text" 
+                  id="youtube-url" 
+                  placeholder="Paste YouTube video URL here (e.g., https://www.youtube.com/watch?v=...)"
+                  class="w-full p-4 pr-12 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500"
+                >
+                <button 
+                  onclick="pasteFromClipboard()" 
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  title="Paste from clipboard"
+                >
+                  <i class="fas fa-paste"></i>
+                </button>
+              </div>
+              <button 
+                onclick="analyzeVideo()" 
+                class="w-full py-3 px-6 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all font-medium"
+                id="analyze-btn"
+              >
+                <i class="fas fa-search mr-2"></i>Analyze Video
+              </button>
+            </div>
+          </div>
+
+          <!-- Video Analysis Results -->
+          <div id="video-analysis" class="input-group p-6 hidden">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">Video Details</h3>
+            <div class="space-y-3">
+              <div class="flex items-start space-x-3">
+                <div class="w-16 h-12 bg-gray-200 rounded overflow-hidden flex-shrink-0">
+                  <img id="video-thumbnail" src="" alt="Thumbnail" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 min-w-0">
+                  <h4 id="video-title" class="font-medium text-gray-900 truncate">Video Title</h4>
+                  <p id="video-author" class="text-sm text-gray-600">Channel Name</p>
+                  <div class="flex items-center space-x-4 text-xs text-gray-500 mt-1">
+                    <span id="video-duration">0:00</span>
+                    <span id="video-views">0 views</span>
+                    <span id="video-upload-date">Upload date</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download Options -->
+          <div id="download-options" class="input-group p-6 hidden">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">Download Options</h3>
+            <div class="space-y-3">
+              
+              <!-- Video Quality Options -->
+              <div class="space-y-2">
+                <h4 class="font-medium text-gray-700">Video Quality</h4>
+                <div class="space-y-2" id="video-formats">
+                  <!-- Video format options will be populated here -->
+                </div>
+              </div>
+
+              <!-- Audio Quality Options -->
+              <div class="space-y-2">
+                <h4 class="font-medium text-gray-700">Audio Only</h4>
+                <div class="space-y-2" id="audio-formats">
+                  <!-- Audio format options will be populated here -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alternative Methods -->
+          <div class="input-group p-6">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">Alternative Methods</h3>
+            <div class="space-y-3 text-sm">
+              <div class="p-3 bg-blue-50 rounded-lg">
+                <h4 class="font-medium text-blue-900">YouTube Premium</h4>
+                <p class="text-blue-700">Official offline download feature for premium subscribers</p>
+              </div>
+              <div class="p-3 bg-green-50 rounded-lg">
+                <h4 class="font-medium text-green-900">Browser Extensions</h4>
+                <p class="text-green-700">Use trusted browser extensions for personal use</p>
+              </div>
+              <div class="p-3 bg-purple-50 rounded-lg">
+                <h4 class="font-medium text-purple-900">Desktop Software</h4>
+                <p class="text-purple-700">4K Video Downloader, yt-dlp, or similar tools</p>
+              </div>
+            </div>
+          </div>
+        </div>        <!-- Output Section -->
+        <div class="output-section space-y-6">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Video Preview</h2>
+          
+          <!-- Video Preview -->
+          <div class="video-preview p-8 text-center" id="video-preview">
+            <i class="fas fa-play-circle text-6xl text-gray-300 mb-4"></i>
+            <p class="text-gray-500">Video preview will appear here</p>
+            <div id="video-container" class="hidden">
+              <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden">
+                <iframe 
+                  id="video-iframe" 
+                  src="" 
+                  frameborder="0" 
+                  allowfullscreen
+                  class="w-full h-full"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download Progress -->
+          <div id="download-progress" class="hidden input-group p-4">
+            <h3 class="text-lg font-medium text-gray-700 mb-3">Download Progress</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between text-sm">
+                <span id="progress-text">Preparing download...</span>
+                <span id="progress-percentage">0%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+              </div>
+              <div class="flex justify-between text-xs text-gray-500">
+                <span id="download-speed">0 KB/s</span>
+                <span id="download-eta">ETA: --</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Download History -->
+          <div id="download-history" class="hidden input-group p-4">
+            <h3 class="text-lg font-medium text-gray-700 mb-3">Recent Downloads</h3>
+            <div id="history-list" class="space-y-2">
+              <!-- Download history items will appear here -->
+            </div>
+            <button onclick="clearHistory()" class="mt-3 text-sm text-red-600 hover:text-red-700">
+              <i class="fas fa-trash mr-1"></i>Clear History
+            </button>
+          </div>
+
+          <!-- Instructions -->
+          <div class="input-group p-6">
+            <h3 class="text-lg font-medium text-gray-700 mb-4">How to Use</h3>
+            <div class="space-y-3 text-sm text-gray-600">
+              <div class="flex items-start space-x-2">
+                <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-medium">1</span>
+                <p>Paste a YouTube video URL in the input field</p>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-medium">2</span>
+                <p>Click "Analyze Video" to fetch video information</p>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-medium">3</span>
+                <p>Select your preferred video quality or audio format</p>
+              </div>
+              <div class="flex items-start space-x-2">
+                <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-xs font-medium">4</span>
+                <p>Follow the provided download links or instructions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>    </div>
+  </div>
+
+  <!-- License Agreement Modal -->
+  <div id="license-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 m-4 max-w-md w-full max-h-[90vh] overflow-y-auto">
+      <h3 class="text-xl font-bold text-gray-800 mb-4">Download License Agreement</h3>
+      
+      <div class="text-sm text-gray-600 space-y-3 mb-6">
+        <p><strong>Please read and accept the following terms before downloading:</strong></p>
+        
+        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-3">
+          <h4 class="font-semibold text-yellow-800 mb-2">Copyright & Legal Notice</h4>
+          <ul class="text-yellow-700 text-xs space-y-1">
+            <li>• Only download content you own or have permission to download</li>
+            <li>• Respect YouTube's Terms of Service and copyright laws</li>
+            <li>• Do not redistribute copyrighted content without permission</li>
+            <li>• Use downloaded content for personal, non-commercial purposes only</li>
+          </ul>
+        </div>
+        
+        <div class="bg-blue-50 border border-blue-200 rounded-lg p-3">
+          <h4 class="font-semibold text-blue-800 mb-2">Usage Guidelines</h4>
+          <ul class="text-blue-700 text-xs space-y-1">
+            <li>• This tool is for educational and personal use</li>
+            <li>• Downloads may be subject to quality limitations</li>
+            <li>• Service availability depends on external APIs</li>
+            <li>• We are not responsible for downloaded content</li>
+          </ul>
+        </div>
+        
+        <p class="text-xs text-gray-500">
+          By proceeding, you acknowledge that you understand and agree to these terms.
+        </p>
+      </div>
+      
+      <div class="flex space-x-3">
+        <button 
+          id="accept-license" 
+          class="flex-1 py-2 px-4 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-all font-medium text-sm"
+        >
+          I Accept & Continue
+        </button>
+        <button 
+          id="decline-license" 
+          class="flex-1 py-2 px-4 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-all font-medium text-sm"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared-utils.js"></script>
+  <script src="../universal-enhancements.js"></script>
+  <script src="youtube-downloader.js"></script>
+</body>
+</html>

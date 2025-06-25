@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Use - LinkToQR.me NEXUS | Complete User Guide & Tutorials</title>
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Complete interactive guide on how to use LinkToQR.me NEXUS tools - QR generators, image processors, PDF converters, and secure text storage. Step-by-step tutorials with live demos.">
+  <meta name="keywords" content="how to use, user guide, tutorial, LinkToQR, web tools, nexus, qr generator, image tools, pdf converter, guide">
+  <meta name="author" content="LinkToQR.me NEXUS">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://linktoqr.me/how-to-use.html">
+  
+  <!-- Social Media Meta Tags -->
+  <meta property="og:title" content="How to Use LinkToQR.me NEXUS - Interactive User Guide">
+  <meta property="og:description" content="Master all LinkToQR.me NEXUS tools with our comprehensive interactive guide featuring step-by-step tutorials and live demos.">
+  <meta property="og:image" content="https://linktoqr.me/favicon.ico">
+  <meta property="og:url" content="https://linktoqr.me/how-to-use.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LinkToQR.me NEXUS">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Use LinkToQR.me NEXUS - Interactive User Guide">
+  <meta name="twitter:description" content="Master all LinkToQR.me NEXUS tools with our comprehensive interactive guide">
+  <meta name="twitter:image" content="https://linktoqr.me/favicon.ico">
+  
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8800973668687939" crossorigin="anonymous"></script>
+  <meta name="google-adsense-account" content="ca-pub-8800973668687939">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>  
+  <style>
+    :root {
+      --primary: #00d4ff;
+      --primary-dark: #0099cc;
+      --secondary: #ff0080;
+      --accent: #7c3aed;
+      --success: #00ff88;
+      --warning: #ffaa00;
+      --error: #ff0040;
+      --neon-blue: #00d4ff;
+      --neon-pink: #ff0080;
+      --neon-purple: #8000ff;
+      --dark-bg: #0a0a0a;
+      --dark-surface: #1a1a1a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Exo 2', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0033 50%, #000a1a 100%);
+      color: white;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .orbitron { font-family: 'Orbitron', monospace; }
+
+    /* Particles Background */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+    }
+
+    /* Cyber Buttons */
+    .cyber-button {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+      border: none;
+      border-radius: 25px;
+      padding: 12px 30px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .cyber-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.6);
+    }
+
+    /* Header */
+    .cyber-header {
+      background: rgba(10, 10, 10, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    }
+
+    .logo-text {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Interactive Guide Cards */
+    .guide-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .guide-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+      border-color: rgba(0, 212, 255, 0.4);
+    }
+
+    .guide-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .guide-card:hover::before {
+      left: 100%;
+    }
+
+    .step-number {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink));
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 1rem;
+      font-size: 1.2rem;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+    }
+
+    /* Accordion Sections */
+    .accordion-section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header {
+      padding: 1.5rem 2rem;
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: between;
+      transition: all 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background: rgba(0, 212, 255, 0.1);
+    }
+
+    .accordion-header.active {
+      background: rgba(0, 212, 255, 0.2);
+      border-bottom-color: var(--neon-blue);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .accordion-content.active {
+      max-height: 1000px;
+    }
+
+    .accordion-content-inner {
+      padding: 2rem;
+    }
+
+    .accordion-icon {
+      transition: transform 0.3s ease;
+      margin-left: auto;
+    }
+
+    .accordion-header.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+
+    /* Tool Demo Cards */
+    .tool-demo-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .tool-demo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+    }
+
+    .demo-preview {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-preview::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 30%, rgba(0, 212, 255, 0.1) 50%, transparent 70%);
+      animation: shimmer 2s infinite;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .try-button {
+      background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .try-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+
+    /* Navigation Sidebar */
+    .nav-sidebar {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      padding: 1rem;
+      z-index: 100;
+    }
+
+    .nav-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      margin: 0.5rem 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .nav-dot.active {
+      background: var(--neon-blue);
+      box-shadow: 0 0 10px var(--neon-blue);
+    }
+
+    /* Search Bar */
+    .search-container {
+      position: relative;
+      max-width: 500px;
+      margin: 0 auto 3rem;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 25px;
+      color: white;
+      font-size: 1rem;
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--neon-blue);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    }
+
+    .search-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-sidebar {
+        display: none;
+      }
+      
+      .guide-card {
+        padding: 1.5rem;
+      }
+      
+      .accordion-header {
+        padding: 1rem 1.5rem;
+      }
+      
+      .accordion-content-inner {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Highlight and Animation Effects */
+    .highlight-box {
+      background: linear-gradient(45deg, rgba(0, 212, 255, 0.1), rgba(255, 0, 128, 0.1));
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+
+    .pulse-effect {
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Particles Background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="cyber-header sticky top-0 z-50 w-full py-4 mb-8">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center">
+          <span class="text-3xl font-bold logo-text orbitron">⚡ LinkToQR.me</span>
+          <span class="text-lg font-semibold text-gray-400 ml-2">NEXUS</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="flex space-x-4">
+          <a href="index.html" class="cyber-button text-sm">
+            <i class="fas fa-home mr-2"></i>HOME
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container mx-auto px-4 py-16">
+    <!-- Hero Section -->
+    <div class="text-center mb-16">
+      <h1 class="text-6xl font-bold mb-6 orbitron" style="background: linear-gradient(45deg, var(--neon-blue), var(--neon-pink)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+        📖 INTERACTIVE GUIDE
+      </h1>
+      <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+        Master LinkToQR.me NEXUS tools with our comprehensive interactive guide featuring step-by-step tutorials and live demos
+      </p>
+      
+      <!-- Search Bar -->
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search for tools, features, or help topics..." id="searchInput">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+
+    <!-- AdSense Ad Unit 1 -->
+    <div class="text-center mb-8">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-8800973668687939"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
+
+    <!-- Quick Start Guide -->
+    <div class="guide-card pulse-effect" id="quick-start">
+      <h2 class="text-4xl font-bold mb-8 orbitron text-white text-center">🚀 QUICK START</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center">
+          <div class="step-number mx-auto">1</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Browse Tools</h3>
+          <p class="text-gray-300 text-sm">Explore our homepage to discover all available tools</p>
+        </div>
+
+        <div class="text-center">
+          <div class="step-number mx-auto">2</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Click & Open</h3>
+          <p class="text-gray-300 text-sm">Click any tool card to open it instantly in a new tab</p>
+        </div>
+
+        <div class="text-center">
+          <div class="step-number mx-auto">3</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Upload & Process</h3>
+          <p class="text-gray-300 text-sm">Drag files or click to upload, processing happens instantly</p>
+        </div>
+
+        <div class="text-center">
+          <div class="step-number mx-auto">4</div>
+          <h3 class="text-lg font-semibold text-white mb-2">Download Results</h3>
+          <p class="text-gray-300 text-sm">Download your processed files with one click</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="index.html" class="cyber-button text-lg">
+          <i class="fas fa-rocket mr-2"></i>Start Using Tools Now
+        </a>
+      </div>
+    </div>
+
+    <!-- Tool Categories with Interactive Demos -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16" id="tool-categories">
+      
+      <!-- QR Code Tools -->
+      <div class="accordion-section">
+        <div class="accordion-header" onclick="toggleAccordion('qr-tools')">
+          <div class="flex items-center">
+            <i class="fas fa-qrcode text-2xl mr-4 text-cyan-400"></i>
+            <div>
+              <h3 class="text-2xl font-bold orbitron text-white">QR Code Tools</h3>
+              <p class="text-gray-400">Generate QR codes for any purpose</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-white"></i>
+        </div>
+        <div class="accordion-content" id="qr-tools">
+          <div class="accordion-content-inner">
+            <div class="tool-demo-card">
+              <div class="demo-preview">
+                <div class="text-center">
+                  <i class="fas fa-qrcode text-6xl text-cyan-400 mb-4"></i>
+                  <p class="text-white">QR Generator Demo</p>
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold text-white mb-2">QR Code Generator</h4>
+              <p class="text-gray-300 mb-3">Create QR codes for URLs, text, WiFi, contact info, and more</p>
+              <div class="highlight-box">
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• <strong>Input:</strong> Text, URL, WiFi credentials, contact details</li>
+                  <li>• <strong>Customize:</strong> Colors, logo, error correction level</li>
+                  <li>• <strong>Output:</strong> PNG, SVG, PDF formats</li>
+                  <li>• <strong>Batch:</strong> Generate multiple QR codes from CSV</li>
+                </ul>
+              </div>
+              <a href="tools/qr-generator/index.html" target="_blank" class="try-button">
+                <i class="fas fa-external-link-alt mr-2"></i>Try QR Generator
+              </a>
+            </div>
+            
+            <div class="tool-demo-card">
+              <div class="demo-preview">
+                <div class="text-center">
+                  <i class="fas fa-camera text-6xl text-purple-400 mb-4"></i>
+                  <p class="text-white">QR Scanner Demo</p>
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold text-white mb-2">QR Code Scanner</h4>
+              <p class="text-gray-300 mb-3">Scan QR codes using your camera or upload images</p>
+              <div class="highlight-box">
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• <strong>Camera:</strong> Real-time scanning with device camera</li>
+                  <li>• <strong>Upload:</strong> Scan QR codes from image files</li>
+                  <li>• <strong>Results:</strong> Extract text, URLs, and data instantly</li>
+                </ul>
+              </div>
+              <a href="tools/qr-scanner/index.html" target="_blank" class="try-button">
+                <i class="fas fa-external-link-alt mr-2"></i>Try QR Scanner
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Processing Tools -->
+      <div class="accordion-section">
+        <div class="accordion-header" onclick="toggleAccordion('image-tools')">
+          <div class="flex items-center">
+            <i class="fas fa-image text-2xl mr-4 text-pink-400"></i>
+            <div>
+              <h3 class="text-2xl font-bold orbitron text-white">Image Tools</h3>
+              <p class="text-gray-400">Process and enhance your images</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-white"></i>
+        </div>
+        <div class="accordion-content" id="image-tools">
+          <div class="accordion-content-inner">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-compress-alt text-4xl text-green-400 mb-2"></i>
+                    <p class="text-white text-sm">Compressor</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Image Compressor</h4>
+                <p class="text-gray-300 text-sm mb-2">Reduce file size while maintaining quality</p>
+                <a href="tools/image-compressor/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-expand-arrows-alt text-4xl text-blue-400 mb-2"></i>
+                    <p class="text-white text-sm">Resizer</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Image Resizer</h4>
+                <p class="text-gray-300 text-sm mb-2">Change dimensions with aspect ratio control</p>
+                <a href="tools/image-resizer/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-crop-alt text-4xl text-yellow-400 mb-2"></i>
+                    <p class="text-white text-sm">Cropper</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Image Cropper</h4>
+                <p class="text-gray-300 text-sm mb-2">Crop with multiple shapes and overlays</p>
+                <a href="tools/image-cropper/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-exchange-alt text-4xl text-purple-400 mb-2"></i>
+                    <p class="text-white text-sm">Converter</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Format Converter</h4>
+                <p class="text-gray-300 text-sm mb-2">Convert between JPG, PNG, WebP formats</p>
+                <a href="tools/image-format-converter/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PDF Tools -->
+      <div class="accordion-section">
+        <div class="accordion-header" onclick="toggleAccordion('pdf-tools')">
+          <div class="flex items-center">
+            <i class="fas fa-file-pdf text-2xl mr-4 text-red-400"></i>
+            <div>
+              <h3 class="text-2xl font-bold orbitron text-white">PDF Tools</h3>
+              <p class="text-gray-400">Create and manage PDF documents</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-white"></i>
+        </div>
+        <div class="accordion-content" id="pdf-tools">
+          <div class="accordion-content-inner">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-file-pdf text-4xl text-red-400 mb-2"></i>
+                    <p class="text-white text-sm">PDF Converter</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">PDF Converter</h4>
+                <p class="text-gray-300 text-sm mb-2">Convert documents and images to PDF</p>
+                <a href="tools/pdf-converter/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-object-group text-4xl text-orange-400 mb-2"></i>
+                    <p class="text-white text-sm">PDF Merger</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">PDF Merger</h4>
+                <p class="text-gray-300 text-sm mb-2">Combine multiple PDFs into one document</p>
+                <a href="tools/pdf-merger/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-images text-4xl text-green-400 mb-2"></i>
+                    <p class="text-white text-sm">Photo to PDF</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Photo to PDF</h4>
+                <p class="text-gray-300 text-sm mb-2">Create PDFs from image collections</p>
+                <a href="tools/photo-to-pdf/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+
+              <div class="tool-demo-card">
+                <div class="demo-preview">
+                  <div class="text-center">
+                    <i class="fas fa-scanner text-4xl text-blue-400 mb-2"></i>
+                    <p class="text-white text-sm">Doc Scanner</p>
+                  </div>
+                </div>
+                <h4 class="text-base font-semibold text-white mb-1">Document Scanner</h4>
+                <p class="text-gray-300 text-sm mb-2">Convert photos to document scans</p>
+                <a href="tools/document-scanner/index.html" target="_blank" class="try-button text-sm">
+                  <i class="fas fa-external-link-alt mr-1"></i>Try Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secure Storage -->
+      <div class="accordion-section">
+        <div class="accordion-header" onclick="toggleAccordion('storage-tools')">
+          <div class="flex items-center">
+            <i class="fas fa-vault text-2xl mr-4 text-green-400"></i>
+            <div>
+              <h3 class="text-2xl font-bold orbitron text-white">Secure Storage</h3>
+              <p class="text-gray-400">Password-protected text storage</p>
+            </div>
+          </div>
+          <i class="fas fa-chevron-down accordion-icon text-white"></i>
+        </div>
+        <div class="accordion-content" id="storage-tools">
+          <div class="accordion-content-inner">
+            <div class="tool-demo-card">
+              <div class="demo-preview">
+                <div class="text-center">
+                  <i class="fas fa-lock text-6xl text-green-400 mb-4"></i>
+                  <p class="text-white">Secure Text Vault</p>
+                </div>
+              </div>
+              <h4 class="text-lg font-semibold text-white mb-2">Store Text Vault</h4>
+              <p class="text-gray-300 mb-3">Secure, password-protected text storage in your browser</p>
+              <div class="highlight-box">
+                <ul class="text-sm text-gray-300 space-y-1">
+                  <li>• <strong>Store:</strong> Create password-protected notes</li>
+                  <li>• <strong>Retrieve:</strong> Find saved notes with name/password</li>
+                  <li>• <strong>Multi-Window:</strong> Organize content separately</li>
+                  <li>• <strong>Local:</strong> All data stays in your browser</li>
+                </ul>
+              </div>
+              <a href="tools/store-text/index.html" target="_blank" class="try-button">
+                <i class="fas fa-external-link-alt mr-2"></i>Try Text Vault
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    <!-- AdSense Ad Unit 2 -->
+    <div class="text-center mb-8">
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-layout="in-article"
+           data-ad-format="fluid"
+           data-ad-client="ca-pub-8800973668687939"
+           data-ad-slot="auto"></ins>
+    </div>
+
+    <!-- Security & Privacy -->
+    <div class="guide-card" id="security">
+      <h2 class="text-4xl font-bold mb-8 orbitron text-white text-center">🔒 SECURITY & PRIVACY</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="highlight-box">
+          <h4 class="text-2xl font-semibold text-cyan-400 mb-4 flex items-center">
+            <i class="fas fa-shield-alt mr-3"></i>Your Data is Safe
+          </h4>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+              <span>All processing happens locally in your browser</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+              <span>No files uploaded to external servers</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+              <span>No personal data collection</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check-circle text-green-400 mr-3 mt-1"></i>
+              <span>No registration or login required</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box">
+          <h4 class="text-2xl font-semibold text-pink-400 mb-4 flex items-center">
+            <i class="fas fa-database mr-3"></i>Data Storage
+          </h4>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-info-circle text-blue-400 mr-3 mt-1"></i>
+              <span>Store Text vault uses local browser storage</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-download text-yellow-400 mr-3 mt-1"></i>
+              <span>Export important notes for backup</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-exclamation-triangle text-orange-400 mr-3 mt-1"></i>
+              <span>Clear browser data will delete saved notes</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-key text-purple-400 mr-3 mt-1"></i>
+              <span>Use strong passwords for note protection</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tips & Tricks -->
+    <div class="guide-card" id="tips">
+      <h2 class="text-4xl font-bold mb-8 orbitron text-white text-center">💡 TIPS & BEST PRACTICES</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="highlight-box">
+          <h4 class="text-xl font-semibold text-cyan-400 mb-4 flex items-center">
+            <i class="fas fa-bolt mr-3"></i>Performance Tips
+          </h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-cyan-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Close unused browser tabs for better performance</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-cyan-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Use modern browsers (Chrome, Firefox, Safari)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-cyan-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Large files may take longer to process</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-cyan-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Refresh page if tools become unresponsive</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box">
+          <h4 class="text-xl font-semibold text-pink-400 mb-4 flex items-center">
+            <i class="fas fa-target mr-3"></i>Efficiency Hacks
+          </h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-pink-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Bookmark frequently used tools</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-pink-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Use keyboard shortcuts when available</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-pink-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Batch process multiple files together</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-pink-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Save settings for repeated use</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box">
+          <h4 class="text-xl font-semibold text-purple-400 mb-4 flex items-center">
+            <i class="fas fa-tools mr-3"></i>Troubleshooting
+          </h4>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-purple-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Refresh page if tool stops working</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-purple-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Check file formats are supported</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-purple-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Try smaller file sizes if processing fails</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-arrow-right text-purple-400 mr-2 mt-1 text-sm"></i>
+              <span class="text-sm">Contact support for persistent issues</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="guide-card" id="faq">
+      <h2 class="text-4xl font-bold mb-8 orbitron text-white text-center">❓ FREQUENTLY ASKED QUESTIONS</h2>
+      
+      <div class="space-y-4">
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion('faq-1')">
+            <h4 class="text-lg font-semibold text-white">Are my files safe and secure?</h4>
+            <i class="fas fa-chevron-down accordion-icon text-white"></i>
+          </div>
+          <div class="accordion-content" id="faq-1">
+            <div class="accordion-content-inner">
+              <p class="text-gray-300">Yes! All file processing happens locally in your browser. Your files never leave your device, ensuring complete privacy and security. We don't upload, store, or access your files in any way.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion('faq-2')">
+            <h4 class="text-lg font-semibold text-white">Do I need to create an account?</h4>
+            <i class="fas fa-chevron-down accordion-icon text-white"></i>
+          </div>
+          <div class="accordion-content" id="faq-2">
+            <div class="accordion-content-inner">
+              <p class="text-gray-300">No registration required! All tools are instantly accessible without creating an account. Simply visit any tool and start using it immediately.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion('faq-3')">
+            <h4 class="text-lg font-semibold text-white">What file formats are supported?</h4>
+            <i class="fas fa-chevron-down accordion-icon text-white"></i>
+          </div>
+          <div class="accordion-content" id="faq-3">
+            <div class="accordion-content-inner">
+              <p class="text-gray-300">Our tools support all major formats: Images (JPG, PNG, WebP, GIF), Documents (PDF, DOC, TXT), and more. Each tool specifies its supported formats on the tool page.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion('faq-4')">
+            <h4 class="text-lg font-semibold text-white">Are there file size limits?</h4>
+            <i class="fas fa-chevron-down accordion-icon text-white"></i>
+          </div>
+          <div class="accordion-content" id="faq-4">
+            <div class="accordion-content-inner">
+              <p class="text-gray-300">File size limits depend on your browser and device memory. Generally, files up to 100MB work well. For very large files, try processing them in smaller batches.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-section">
+          <div class="accordion-header" onclick="toggleAccordion('faq-5')">
+            <h4 class="text-lg font-semibold text-white">Can I use these tools on mobile?</h4>
+            <i class="fas fa-chevron-down accordion-icon text-white"></i>
+          </div>
+          <div class="accordion-content" id="faq-5">
+            <div class="accordion-content-inner">
+              <p class="text-gray-300">Yes! All tools are mobile-friendly and work on smartphones and tablets. The interface adapts to your screen size for optimal usability.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="text-center mt-16">
+      <h3 class="text-3xl font-bold mb-8 orbitron text-white">Ready to Get Started?</h3>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="index.html" class="cyber-button text-lg">
+          <i class="fas fa-home mr-2"></i>Browse All Tools
+        </a>
+        <a href="tools/qr-generator/index.html" target="_blank" class="cyber-button text-lg" style="background: linear-gradient(45deg, var(--neon-purple), var(--neon-pink));">
+          <i class="fas fa-qrcode mr-2"></i>Try QR Generator
+        </a>
+        <a href="tools/store-text/index.html" target="_blank" class="cyber-button text-lg" style="background: linear-gradient(45deg, var(--success), var(--neon-blue));">
+          <i class="fas fa-vault mr-2"></i>Try Text Vault
+        </a>
+      </div>
+    </div>
+
+    <!-- Navigation Sidebar -->
+    <div class="nav-sidebar">
+      <div class="nav-dot active" onclick="scrollToSection('quick-start')" title="Quick Start"></div>
+      <div class="nav-dot" onclick="scrollToSection('tool-categories')" title="Tool Categories"></div>
+      <div class="nav-dot" onclick="scrollToSection('security')" title="Security"></div>
+      <div class="nav-dot" onclick="scrollToSection('tips')" title="Tips"></div>
+      <div class="nav-dot" onclick="scrollToSection('faq')" title="FAQ"></div>
+    </div>
+
+  </main>
+  <!-- JavaScript -->
+  <script>
+    // Initialize AdSense
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    (adsbygoogle = window.adsbygoogle || []).push({});
+
+    // Initialize particles
+    tsParticles.load("particles-js", {
+      background: { color: { value: "transparent" } },
+      fpsLimit: 120,
+      interactivity: {
+        events: {
+          onClick: { enable: true, mode: "push" },
+          onHover: { enable: true, mode: "repulse" },
+          resize: true,
+        },
+        modes: {
+          push: { quantity: 4 },
+          repulse: { distance: 200, duration: 0.4 },
+        },
+      },
+      particles: {
+        color: { value: ["#00d4ff", "#ff0080", "#8000ff"] },
+        links: {
+          color: "#00d4ff",
+          distance: 150,
+          enable: true,
+          opacity: 0.3,
+          width: 1,
+        },
+        collisions: { enable: true },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: { default: "bounce" },
+          random: false,
+          speed: 2,
+          straight: false,
+        },
+        number: { density: { enable: true, area: 800 }, value: 80 },
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 5 } },
+      },
+      detectRetina: true,
+    });
+
+    // Accordion functionality
+    function toggleAccordion(id) {
+      const content = document.getElementById(id);
+      const header = content.previousElementSibling;
+      const icon = header.querySelector('.accordion-icon');
+      
+      // Close all other accordions
+      document.querySelectorAll('.accordion-content').forEach(el => {
+        if (el.id !== id) {
+          el.classList.remove('active');
+          el.previousElementSibling.classList.remove('active');
+        }
+      });
+      
+      // Toggle current accordion
+      content.classList.toggle('active');
+      header.classList.toggle('active');
+    }
+
+    // Search functionality
+    function initializeSearch() {
+      const searchInput = document.getElementById('searchInput');
+      let searchTimeout;
+
+      searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          const query = this.value.toLowerCase();
+          searchContent(query);
+        }, 300);
+      });
+    }
+
+    function searchContent(query) {
+      const sections = document.querySelectorAll('.guide-card, .accordion-section, .tool-demo-card');
+      
+      if (!query) {
+        sections.forEach(section => {
+          section.style.display = '';
+          section.style.opacity = '1';
+        });
+        return;
+      }
+
+      sections.forEach(section => {
+        const text = section.textContent.toLowerCase();
+        if (text.includes(query)) {
+          section.style.display = '';
+          section.style.opacity = '1';
+          // Highlight matching text
+          highlightText(section, query);
+        } else {
+          section.style.opacity = '0.3';
+        }
+      });
+    }
+
+    function highlightText(element, query) {
+      // Simple highlight implementation
+      const walker = document.createTreeWalker(
+        element,
+        NodeFilter.SHOW_TEXT,
+        null,
+        false
+      );
+
+      const textNodes = [];
+      let node;
+      while (node = walker.nextNode()) {
+        textNodes.push(node);
+      }
+
+      textNodes.forEach(textNode => {
+        const text = textNode.textContent;
+        const regex = new RegExp(`(${query})`, 'gi');
+        if (regex.test(text)) {
+          const highlightedText = text.replace(regex, '<mark style="background: rgba(0, 212, 255, 0.3); color: white;">$1</mark>');
+          const span = document.createElement('span');
+          span.innerHTML = highlightedText;
+          textNode.parentNode.replaceChild(span, textNode);
+        }
+      });
+    }
+
+    // Navigation functionality
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateNavigation(sectionId);
+      }
+    }
+
+    function updateNavigation(activeId) {
+      const navDots = document.querySelectorAll('.nav-dot');
+      const sectionIds = ['quick-start', 'tool-categories', 'security', 'tips', 'faq'];
+      
+      navDots.forEach((dot, index) => {
+        if (sectionIds[index] === activeId) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Scroll spy functionality
+    function initializeScrollSpy() {
+      const sections = ['quick-start', 'tool-categories', 'security', 'tips', 'faq'];
+      
+      window.addEventListener('scroll', () => {
+        const scrollPos = window.scrollY + 200;
+        
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(sections[i]);
+          if (section && section.offsetTop <= scrollPos) {
+            updateNavigation(sections[i]);
+            break;
+          }
+        }
+      });
+    }
+
+    // Interactive demo effects
+    function initializeDemoEffects() {
+      const demoCards = document.querySelectorAll('.tool-demo-card');
+      
+      demoCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          const preview = this.querySelector('.demo-preview');
+          if (preview) {
+            preview.style.transform = 'scale(1.05)';
+            preview.style.transition = 'transform 0.3s ease';
+          }
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          const preview = this.querySelector('.demo-preview');
+          if (preview) {
+            preview.style.transform = 'scale(1)';
+          }
+        });
+      });
+    }
+
+    // Keyboard shortcuts
+    function initializeKeyboardShortcuts() {
+      document.addEventListener('keydown', function(e) {
+        // Ctrl/Cmd + K for search
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+          e.preventDefault();
+          document.getElementById('searchInput').focus();
+        }
+        
+        // Escape to clear search
+        if (e.key === 'Escape') {
+          const searchInput = document.getElementById('searchInput');
+          if (searchInput.value) {
+            searchInput.value = '';
+            searchContent('');
+          }
+        }
+      });
+    }
+
+    // Lazy loading for better performance
+    function initializeLazyLoading() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeIn');
+          }
+        });
+      });
+
+      document.querySelectorAll('.guide-card, .accordion-section').forEach(el => {
+        observer.observe(el);
+      });
+    }
+
+    // Initialize all functionality when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeSearch();
+      initializeScrollSpy();
+      initializeDemoEffects();
+      initializeKeyboardShortcuts();
+      initializeLazyLoading();
+      
+      // Add smooth animations
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+      
+      console.log('🚀 LinkToQR.me NEXUS How-to-Use Guide initialized!');
+    });
+
+    // Add CSS animation classes
+    const style = document.createElement('style');
+    style.textContent = `
+      .animate-fadeIn {
+        animation: fadeIn 0.6s ease-in-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      mark {
+        border-radius: 3px;
+        padding: 1px 3px;
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
